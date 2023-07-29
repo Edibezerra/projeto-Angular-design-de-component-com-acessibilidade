@@ -1,5 +1,6 @@
+
 import { YesNoButtonGroupModule } from './yes-no-button-group.module';
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-yes-no-button-group',
@@ -8,7 +9,8 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class YesNoButtonGroupComponent implements OnInit {
   @Input() public value: string = null;
-  @Input() public label = " ";
+  @Input() public label = "";
+  @Output() public valueChange = new EventEmitter<string>();
   public options = YesNoButtonGroupOptions;
 
   constructor() { }
@@ -18,6 +20,7 @@ export class YesNoButtonGroupComponent implements OnInit {
   }
   public activate(value: string):void{
     this.value = value;
+    this.valueChange.emit(this.value);
   }
 }
 enum YesNoButtonGroupOptions{
