@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
@@ -16,7 +16,8 @@ import { YesNoButtonGroupModule } from './shared/components/yes-no-button-group/
     BrowserModule,
     CommonModule,
     YesNoButtonGroupModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
 
   providers: [],

@@ -10,7 +10,6 @@ export class AppComponent {
   title = 'a11y-p1';
   public form: FormGroup = null;
 
-
   constructor(formBuilder: FormBuilder){
     this.form = formBuilder.group({
       yesNoAnswer: ['no']
