@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 
 import { CommonModule } from '@angular/common';
 import { YesNoButtonGroupModule } from './shared/components/yes-no-button-group/yes-no-button-group.module';
+import { DisableControlModule } from './shared/directives/Disable-control/disable-control.module';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { YesNoButtonGroupModule } from './shared/components/yes-no-button-group/
     CommonModule,
     YesNoButtonGroupModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    DisableControlModule
   ],
 
   providers: [],
